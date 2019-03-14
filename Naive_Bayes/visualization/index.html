@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Naive Bayes - Sentiment Analysis with Movies Reviews</title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://d3js.org/d3.v4.js"></script>
+	</head>
+	
+	<body>
+		<div class="content">
+			<section>
+				<h2>Naive Bayes - Sentiment Analysis with Movies Reviews</h2>
+
+				<div class="entry">
+					<p class="question">Visualize the top 10 most meaningful words for each class. Write why you picked that visualization and what it shows.</p>
+					<p id="scatter-plot"></p>
+					<p class="caption">
+						The top 10 most meaningful words for each label groups are presented below
+						<ul>
+							<li><b>Positive review:</b> great, best, love, also, excellent, well, wonderful, life, beautiful, story</li>
+							<li><b>Negative review:</b> bad, worst, even, plot, acting, nothing, movie, waste, awful, minute</li>
+						</ul>
+						I used a fairly naive algorithm to find these meaningful words.  The algorithm assigns a polarity score to each words in the review's corpus using the number of time the word appears in each label groups.  For example, if word A appears 100 times in positive group and 5 times in negative group, it will have a polarity score of positive 95.  On the other hand, if word B appears 100 times in negative group and 5 times in positive group, it will have a polarity score of negative 95.  This algorithm takes appearance count into consideration.  This may overlook meaningful words that do not appear often but have an absolute negative or positive connotation.  For example, the word 'atrocious' has a very negative connotation; however, it is not used often.  If atrocious was used in the review data, a person can tell that the review with 'atrocious' in it is probably negative.  However, if 'atrocious' is used 5 time in negative reviews and 0 time in positive reviews, then its polarity score is only negative 5 even though it has a high negative connotation to human reader.  There are other algorithms that take many measures into determining the meaningfulness of a word (or group of words), but for the sake of simplicity and the nature of naive bayes (using words probability to determine outcome probability), I used this naive algorithm considering it yielded result that can be used to meaningfully separate the two label groups.
+
+						Using the algorithm described in the answer for question one, I extracted the top 10 most meaningful words for each label groups.  The visualization highlight these words using orange for words with high negative score and blue for words with high positive score.  Words colored gray are not in the top 20.  <i>(Note: this visualization only includes the top 2000 words, based on frequency, in the corpus to speed up visualization load time.)</i>
+						<br/><br/>
+						The top 20 are chosen based on their polarity scores.  Each word is represented with a dot.  Mouseover each dot will reveal the word.  Below is the list of the top 10 words for each label group
+						<ul>
+						 	<li><b>Positive review:</b> great, best, love, also, excellent, well, wonderful, life, beautiful, story</li>
+						 	<li><b>Negative review:</b> bad, worst, even, plot, acting, nothing, movie, waste, awful, minutes</li>
+						</ul>
+						I chose a scatter plot to present the top 10 most meaningful words for each label group because it describes what the algorithm (described in question 1's answer) takes into consideration to determine the meaningfulness of a word.  In addition, the scatter plot places these top 20 words into perspective with other words in the corpus.  The spectrum of polarity with the top 10 words of each label groups lying at the two ends of the spectrum provides contrast.  The visualization also shows that for Naive Bayes algorithm, most words would lie in the middle of the polarity spectrum (gray dots), only a few words hold the deciding 'votes' that meaningfully separate the label groups.
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<!-- Javascripts go here --->
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="js/scatter_plot.js"></script>
+
+	</body>
+</html>
