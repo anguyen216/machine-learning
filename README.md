@@ -15,7 +15,7 @@ To run main files, simply do
 python main.py
 ```
 
-## To be included
+## To-do checklist
 List of files/algorithms to be included
 
 *Very fine print: I am a senior so I don't have much time, but I will try to check all of these out as soon as I can :)*
