@@ -15,7 +15,7 @@ To run main files, simply do
 python main.py
 ```
 
-### To be included
+## To be included
 List of files/algorithms to be included
 
 *Very fine print: I am a senior so I don't have much time, but I will try to check all of these out as soon as I can :)*
@@ -27,7 +27,7 @@ List of files/algorithms to be included
 - [ ] README files for each algorithm
 - [ ] algorithm evaluation functions
 
-### Note
+## Note
 - All codes follow python3 syntax
 - Some files may have excessive comment, this is because these files are from my class projects (I have edit them so they are easier to read, as well)
 - Everyone is welcome to check these implementations out and try them.  I do appreciate feedback (if you see something wrong, or some changes that can make the code **faster**, please do let me know)
