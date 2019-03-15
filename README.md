@@ -3,7 +3,7 @@
 
 This folder includes several common machine learning algorithms.
 
-The purpose of this repository is to help with the understanding of the mathematical foundation (and how to implement them) behind common machine learning algorithms.  As a result, these implementations avoid using advance python libraries and packages, which if used in practice can significantly speed up the training process and be more general (for example, the naive bayes implementation in this folder, though can classify more than 2 classes, only works with text data).  In addition, for the sake of avoid reinventing the wheel as well as avoid excessive looping through the data (making the code clunky), I used pandas and numpy to store and filter the data and to do some simple calculations
+The purpose of this repository is to help with the understanding of the mathematical foundation (and how to implement them) behind common machine learning algorithms.  As a result, these implementations avoid using advance python libraries and packages, which if used in practice can significantly speed up the training process and be more general (for example, the naive bayes implementation in this folder, though can classify more than 2 classes, only works with text data).  In addition, for the sake of avoiding reinventing the wheel as well as avoiding excessive looping through the data (making the code clunky), I used pandas and numpy to store and filter the data and to do some simple calculations
 
 Each folder includes at least the following:
 1. the implementation of each algorithm (often as a class), 
